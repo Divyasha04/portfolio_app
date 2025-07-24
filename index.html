@@ -1,0 +1,140 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>Divyasha | Portfolio</title>
+
+    <!-- Bootstrap & AOS -->
+    <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.0/dist/css/bootstrap.min.css" rel="stylesheet">
+    <link href="https://unpkg.com/aos@2.3.1/dist/aos.css" rel="stylesheet">
+
+    <!-- Lottie -->
+    <script src="https://unpkg.com/@lottiefiles/lottie-player@latest/dist/lottie-player.js"></script>
+
+    <!-- Custom CSS -->
+    <link rel="stylesheet" href="{{ url_for('static', filename='css/style.css') }}">
+</head>
+<body>
+
+<!-- 🎯 Hero Section (Background set in style.css) -->
+<section class="hero-section text-white text-center">
+    <div class="overlay"></div>
+    <div class="container py-5" data-aos="fade-down">
+        <img src="{{ url_for('static', filename='images/profile.png') }}" class="rounded-circle shadow" width="150">
+        <h1 class="mt-3">Divyasha Nayak</h1>
+        <p>Aspiring Data Analyst | Tech Enthusiast</p>
+        <a href="#projects" class="btn btn-outline-light mt-3">View My Work</a>
+    </div>
+</section>
+<section class="container py-3" id="projects" >
+    <h2 class="text-center mb-4 aos-init aos-animate" data-aos="fade-up" style="color:white; font-size: 24px;">Projects</h2>
+
+    <div class="row align-items-center mb-3 aos-init aos-animate" data-aos="fade-right">
+        <div class="col-auto">
+            <img src="/static/images/project1.jpg" alt="Project 1" class="rounded-circle shadow" style="width: 100px; height: 100px; object-fit: cover;">
+        </div>
+        <div class="col">
+            <div class="card bg-dark text-white border-0 p-2">
+                <h6 class="mb-1" style="font-size: 15px;">Titanic ML Predictor</h6>
+                <p class="mb-0" style="font-size: 13px;">Used Python + SVM to predict survival. EDA + model comparison.</p>
+            </div>
+        </div>
+    </div>
+
+    <div class="row align-items-center mb-3 aos-init aos-animate" data-aos="fade-left">
+        <div class="col-auto">
+            <img src="/static/images/project2.jpg" alt="Project 2" class="rounded-circle shadow" style="width: 100px; height: 100px; object-fit: cover;">
+        </div>
+        <div class="col">
+            <div class="card bg-dark text-white border-0 p-2">
+                <h6 class="mb-1" style="font-size: 15px;">Pharmaceutical Sales Dashboard</h6>
+                <p class="mb-0" style="font-size: 13px;">Created Power BI dashboard with drill-downs and insights.</p>
+            </div>
+        </div>
+    </div>
+</section>
+
+
+<!-- 📊 Skills with Progress Bars -->
+<section class="py-5 skills-section">
+    <div class="container">
+        <h2 class="text-center mb-5" style="color: white" data-aos="fade-up">Skills</h2>
+        <div class="row">
+            <div class="col-md-6 mb-4"  style="color: white" data-aos="fade-right">
+                <label>Python</label>
+                <div class="progress">
+                    <div class="progress-bar bg-info" style="width: 90%">90%</div>
+                </div>
+            </div>
+            <div class="col-md-6 mb-4"  style="color: white" data-aos="fade-left">
+                <label>Power BI</label>
+                <div class="progress">
+                    <div class="progress-bar bg-warning" style="width: 80%">80%</div>
+                </div>
+            </div>
+            <div class="col-md-6 mb-4" style="color: white"  data-aos="fade-right">
+                <label>Flask</label>
+                <div class="progress">
+                    <div class="progress-bar bg-success" style="width: 75%">75%</div>
+                </div>
+            </div>
+            <div class="col-md-6 mb-4" style="color: white"  data-aos="fade-left">
+                <label>Excel</label>
+                <div class="progress">
+                    <div class="progress-bar bg-danger" style="width: 85%">85%</div>
+                </div>
+            </div>
+        </div>
+    </div>
+</section>
+
+<section class="text-center py-3 what-i-do-section" style="background-image: url('/static/images/banner.jpg'); background-size: cover; background-position: center; color: white;">
+    <h2 data-aos="zoom-in" style="font-weight: bold; margin-bottom: 10px;" class="aos-init aos-animate">What I Do</h2>
+
+    <lottie-player src="/static/animations/working.json" background="transparent" speed="1" style="width: 150px; height: 150px;" loop autoplay data-aos="fade-up" class="aos-init aos-animate"></lottie-player>
+
+    <div class="container mt-3">
+        <div class="row justify-content-center">
+            <div class="col-md-3 col-sm-6 mb-3 aos-init aos-animate" data-aos="fade-up" style="color:#222" data-aos-delay="100">
+                <div class="card border-0 shadow-sm h-100 p-2" style="height: 200px;color: #222; overflow: auto;">
+                    <i class="fas fa-chart-line fa-lg text-primary mb-2"></i>
+                    <h6 class="font-weight-bold" style="color:rgb(11, 11, 11)">Data Analysis</h6>
+                    <p class=" small" style="color:rgb(6, 6, 6)">Turning raw data into insights using Python & Power BI.</p>
+                </div>
+            </div>
+            <div class="col-md-3 col-sm-6 mb-3 aos-init aos-animate" data-aos="fade-up" style="color:#222" data-aos-delay="200">
+                <div class="card border-0 shadow-sm h-100 p-2"  style="height: 200px;color: #222; overflow: auto;">
+                    <i class="fas fa-code fa-lg text-success mb-2"></i>
+                    <h6 class="font-weight-bold" style="color: #222;" >Web Dev</h6>
+                    <p class="small" style="color: #222;">Building responsive apps using HTML, CSS, Flask.</p>
+                </div>
+            </div>
+            <div class="col-md-3 col-sm-6 mb-3 aos-init aos-animate" data-aos="fade-up" style="color:#222" data-aos-delay="300">
+                <div class="card border-0 shadow-sm h-100 p-2" style="height: 200px;color: #222; overflow: auto;">
+                    <i class="fas fa-pencil-alt fa-lg text-warning mb-2"></i>
+                    <h6 class="font-weight-bold" style="color:black">Content Creation</h6>
+                    <p class=" small" style="color:black">Creating blog content & visuals with Canva.</p>
+                </div>
+            </div>
+        </div>
+    </div>
+</section>
+
+
+
+<!-- 📫 Contact -->
+<div class="text-center my-5">
+    <a href="/contact" class="btn btn-dark btn-lg" data-aos="flip-up">Contact Me</a>
+</div>
+
+<!-- Footer -->
+<footer class="text-white text-center py-4" style="background-color: #222;">
+    <p>&copy; 2025 Divyasha Nayak</p>
+</footer>
+
+<!-- JS Scripts -->
+<script src="https://unpkg.com/aos@2.3.1/dist/aos.js"></script>
+<script>AOS.init();</script>
+</body>
+</html>
+
